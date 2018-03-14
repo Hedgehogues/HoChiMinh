@@ -90,6 +90,13 @@ class Image:
         self.description = ImageDescription(matrix=self.matrix)
         return True
 
+    def load(self):
+        self.matrix = self.image_reader.read()
+        if self.matrix is None:
+            return False
+        self.description = ImageDescription(matrix=self.matrix)
+        return True
+
 
 class Point:
 

@@ -3,7 +3,7 @@ import unittest
 
 from shutil import rmtree
 
-from internal.pdfconverter import PDFConverter
+from internal.io.pdfconverter import PDFConverter
 
 
 class TestPDFConverter(unittest.TestCase):

@@ -142,7 +142,7 @@ class HoChiMinh:
 
         Выходные параметры: таблица с ячейками (список списков Cell)
     """
-    def next_image(self):
+    def process_one_page_image(self):
 
         if not self.__image.load():
             return []

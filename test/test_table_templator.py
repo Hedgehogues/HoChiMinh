@@ -1,11 +1,9 @@
 from internal.extractor.image_processing.connected_components import ConnectedComponents
 from internal.extractor.image_processing.cross_detector import CrossDetector
-from internal.extractor.image_processing.lines_detector import HoughTransformerCanny, SobelDirector
+from internal.extractor.image_processing.lines_detector import SobelDirector
 from internal.extractor.image_processing.hochiminh import HoChiMinh
 from internal.extractor.image_processing.ocr import TesseractWrapper
-from internal.io.reader import ImageReader, ImageFromPDFReader
-from internal.pdfconverter import PDFConverter
-
+from internal.io.reader import ImageReader
 
 path = "../data/test/cell-predictor/"
 
