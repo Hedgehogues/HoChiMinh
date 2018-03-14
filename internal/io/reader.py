@@ -20,7 +20,7 @@ class ImageFromPDFReader:
         Метод возвращает следующее изображение из пула
     """
     def read(self):
-        return cv2.imread(self.converter.next_images(), cv2.IMREAD_GRAYSCALE)
+        return cv2.imread(self.converter.next_path_to_image(), cv2.IMREAD_GRAYSCALE)
 
 
 class ImageReader:

@@ -1,11 +1,8 @@
 from collections import defaultdict
 from operator import itemgetter
-
-import numpy as np
-import cv2
-
-from internal.extractor.image_processing.geometry import Point, Cell, Image
 from sklearn.neighbors import KDTree
+
+from internal.image_processing.geometry import Image, Point, Cell
 
 
 class HoChiMinh:
@@ -145,15 +142,14 @@ class HoChiMinh:
 
         Выходные параметры: таблица с ячейками (список списков Cell)
     """
+    def next_image(self):
 
-    def next_page(self):
+        if not self.__image.load():
+            return []
 
         self.__unique_clusters = defaultdict()
         self.__x = []
         self.__y = []
-
-        if not self.__image.load():
-            return []
 
         # TODO: перенести выделение компонент связности сюда
 
@@ -192,6 +188,3 @@ class HoChiMinh:
         table = self.ocr.recognize_table(self.__image.matrix, self.__create_table())
 
         return table
-
-    def next_document(self):
-        pass
