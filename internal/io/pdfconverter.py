@@ -38,6 +38,14 @@ class PDFConverter:
         self.__last_pdf_path = 0
 
     """
+        Returns the path to the last image was read
+
+        Возвращает путь к последнему прочитанному изображению
+    """
+    def get_last_image_path(self):
+        return '' if self.__last_image_path == 0 else self.__list_paths_to_images[self.__last_image_path - 1]
+
+    """
         Returns the path to the next image from the pool of converted images. When you reach the end of the list, will 
         be return blank lines.
         
