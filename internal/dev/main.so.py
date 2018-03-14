@@ -3,8 +3,8 @@ import ctypes
 import cv2
 import numpy as np
 
-image = cv2.imread('data/test/cell-predictor/pdf/images/8.pdf/-1.ppm', cv2.IMREAD_GRAYSCALE)
-# image = cv2.imread('data/test/cell-predictor/pdf/images/17.pdf/-1.ppm', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('data/test/ho_chi_minh/pdf/images/8.pdf/-1.ppm', cv2.IMREAD_GRAYSCALE)
+# image = cv2.imread('data/test/ho_chi_minh/pdf/images/17.pdf/-1.ppm', cv2.IMREAD_GRAYSCALE)
 # cv2.imshow('', image)
 # cv2.waitKeyEx(0)
 

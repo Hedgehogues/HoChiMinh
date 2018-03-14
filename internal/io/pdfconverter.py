@@ -42,7 +42,7 @@ class PDFConverter:
 
         Возвращает путь к последнему прочитанному изображению
     """
-    def get_last_image_path(self):
+    def get_path(self):
         return '' if self.__last_image_path == 0 else self.__list_paths_to_images[self.__last_image_path - 1]
 
     """
@@ -109,7 +109,7 @@ class PDFConverter:
         os.makedirs(output_folder)
         count_images = len(convert_from_path(in_path, dpi=self.resolution, output_folder=output_folder))
         self.__list_paths_to_images += [
-            output_folder + '-' + str(ind + 1) + '.ppm'
+            output_folder + '-' + '0' * (len(str(count_images)) - len(str(ind + 1))) + str(ind + 1) + '.ppm'
             for ind in range(count_images)
         ]
 

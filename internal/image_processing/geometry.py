@@ -87,14 +87,7 @@ class Image:
         self.matrix = self.image_reader.read()
         if self.matrix is None:
             return False
-        self.description = ImageDescription(matrix=self.matrix)
-        return True
-
-    def load(self):
-        self.matrix = self.image_reader.read()
-        if self.matrix is None:
-            return False
-        self.description = ImageDescription(matrix=self.matrix)
+        self.description = ImageDescription(src=self.image_reader.get_path(), matrix=self.matrix)
         return True
 
 

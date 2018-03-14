@@ -1,5 +1,6 @@
 from collections import defaultdict
 from operator import itemgetter
+
 from sklearn.neighbors import KDTree
 
 from internal.image_processing.geometry import Image, Point, Cell
@@ -105,11 +106,11 @@ class HoChiMinh:
     def __create_table(self):
         table = []
         for ind_y in range(len(self.__y)):
-            if ind_y == 0 or ind_y == len(self.__x) - 1:
+            if ind_y == 0:
                 continue
             table.append([])
             for ind_x in range(len(self.__x)):
-                if ind_x == 0 or ind_x == 0:
+                if ind_x == 0:
                     continue
                 cell = Cell(
                     x_min=self.__x[ind_x - 1], y_min=self.__y[ind_y - 1],
@@ -138,14 +139,20 @@ class HoChiMinh:
         return image
 
     """
+        Получить путь к картинке, которая была обработана последней
+    """
+    def get_path(self):
+        return self.__image.description.src
+
+    """
         Обработка картинок с таблицами
 
         Выходные параметры: таблица с ячейками (список списков Cell)
     """
-    def process_one_page_image(self):
+    def process_image(self):
 
         if not self.__image.load():
-            return []
+            return None
 
         self.__unique_clusters = defaultdict()
         self.__x = []
@@ -186,5 +193,34 @@ class HoChiMinh:
         self.__y = sorted(list(set(self.__y)))
 
         table = self.ocr.recognize_table(self.__image.matrix, self.__create_table())
+
+        return table
+
+
+class PDFParser:
+
+    def __init__(self, table_extractor):
+        self.table_extractor = table_extractor
+        self.table = []
+
+    def extract_table(self):
+
+        prev_base_path = ''
+        while True:
+            table_per_page = self.table_extractor.process_image()
+            if table_per_page is None:
+                table = self.table
+                self.table = []
+                break
+
+            path_to_img = self.table_extractor.get_path()
+            base_path = path_to_img[:str.rfind(path_to_img, '/') + 1]
+            if base_path == prev_base_path or prev_base_path == '':
+                prev_base_path = base_path
+                self.table += table_per_page
+            else:
+                table = self.table
+                self.table = table_per_page
+                break
 
         return table

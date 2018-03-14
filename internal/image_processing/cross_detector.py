@@ -1,4 +1,4 @@
-from internal.extractor.image_processing.geometry import Point
+from internal.image_processing.geometry import Point
 import numpy as np
 
 

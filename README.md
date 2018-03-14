@@ -149,6 +149,10 @@ tables were unified, then there is an erroneous recognition.
     table = []
     for i in range(4):
         table.append(templator.next_points())
+        
+## Сопотствующие утилиты
+
+
 
 ## Алгоритм
 

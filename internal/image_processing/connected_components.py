@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from internal.extractor.image_processing.geometry import Rectangle, Point
+from internal.image_processing.geometry import Rectangle, Point
 
 
 class ConnectedComponents:
