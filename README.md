@@ -147,6 +147,32 @@ tables were unified, then there is an erroneous recognition.
 
 [20] https://habrahabr.ru/post/351266/
 
+# Other projects
+
+[1] http://tabula.technology/
+
+[2] https://github.com/mpasternak/pdf-table-extractor
+
+[3] https://github.com/DustBytes/PdfTableExtraction
+
+[4] https://github.com/ferhatelmas/docker-pdf-table-extract
+
+[5] https://github.com/jsvine/pdfplumber
+
+[6] https://github.com/tfmorris/pdf2table
+
+[7] https://github.com/ashima/pdf-table-extract
+
+[8] https://github.com/BIDS/agri_tables
+
+[9] https://github.com/BIDS/agri_tables
+
+[10] https://github.com/nsi-iff/pypdf2table
+
+[11] https://github.com/mgedmin/pdf2html
+
+[12] https://github.com/maxbelyanin/pdf-tbl-extract
+
 # Хошимин
 
 ## Обзор
@@ -300,3 +326,29 @@ PDFConverter обрабатывает все файлы, который лежа
 [19] https://github.com/Belval/pdf2image
 
 [20] https://habrahabr.ru/post/351266/
+
+# Другие проекты
+
+[1] http://tabula.technology/
+
+[2] https://github.com/mpasternak/pdf-table-extractor
+
+[3] https://github.com/DustBytes/PdfTableExtraction
+
+[4] https://github.com/ferhatelmas/docker-pdf-table-extract
+
+[5] https://github.com/jsvine/pdfplumber
+
+[6] https://github.com/tfmorris/pdf2table
+
+[7] https://github.com/ashima/pdf-table-extract
+
+[8] https://github.com/BIDS/agri_tables
+
+[9] https://github.com/BIDS/agri_tables
+
+[10] https://github.com/nsi-iff/pypdf2table
+
+[11] https://github.com/mgedmin/pdf2html
+
+[12] https://github.com/maxbelyanin/pdf-tbl-extract
