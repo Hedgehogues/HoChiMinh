@@ -147,6 +147,8 @@ tables were unified, then there is an erroneous recognition.
 
 [20] https://habrahabr.ru/post/351266/
 
+[21] https://habrahabr.ru/post/181580/
+
 # Other projects
 
 [1] http://tabula.technology/
@@ -326,6 +328,8 @@ PDFConverter обрабатывает все файлы, который лежа
 [19] https://github.com/Belval/pdf2image
 
 [20] https://habrahabr.ru/post/351266/
+
+[21] https://habrahabr.ru/post/181580/
 
 # Другие проекты
 
