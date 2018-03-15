@@ -1,7 +1,7 @@
 import cv2
 
 
-class ImageFromPDFReader:
+class ImagePDFReader:
     """
         Постраничное читение изображений, подготовленных pdf-конвертором.
     """

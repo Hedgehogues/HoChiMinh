@@ -7,7 +7,7 @@ from internal.image_processing.hochiminh import HoChiMinh
 from internal.image_processing.ocr import TesseractWrapper
 from internal.image_processing.hochiminh import PDFParser
 from internal.io.pdfconverter import PDFConverter
-from internal.io.reader import ImageFromPDFReader
+from internal.io.reader import ImagePDFReader
 
 
 class TestPDFConverter(unittest.TestCase):
@@ -17,7 +17,7 @@ class TestPDFConverter(unittest.TestCase):
         path = "../data/test/ho_chi_minh/"
         cls.parser = PDFParser(
             table_extractor=HoChiMinh(
-                reader=ImageFromPDFReader(
+                reader=ImagePDFReader(
                     PDFConverter(in_path=path + 'pdf/', out_path=path + 'pdf/images/', resolution=130)
                 ),
                 lines_detector=SobelDirector(),
