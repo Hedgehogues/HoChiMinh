@@ -145,6 +145,8 @@ tables were unified, then there is an erroneous recognition.
 
 [19] https://github.com/Belval/pdf2image
 
+[20] https://habrahabr.ru/post/351266/
+
 # Хошимин
 
 ## Обзор
@@ -296,3 +298,5 @@ PDFConverter обрабатывает все файлы, который лежа
 [18] https://arxiv.org/pdf/1706.07422.pdf
 
 [19] https://github.com/Belval/pdf2image
+
+[20] https://habrahabr.ru/post/351266/
