@@ -108,23 +108,41 @@ tables were unified, then there is an erroneous recognition.
 * OCR. Each cell is considered separately. Recognition is carried out.
 
 ## Links
+
 [1] http://www.machinelearning.ru/wiki/index.php?title=Логистическая_функция
+
 [2] http://www.sibran.ru/upload/iblock/0e1/0e15d76aff003e3879db51f21ae7f694.pdf
+
 [3] https://www.osapublishing.org/DirectPDFAccess/0CF96649-F614-A5CD-5F118AF53F660BAB_383046/copp-2-1-69.pdf?da=1&id=383046&seq=0&mobile=no
+
 [4] https://www.hindawi.com/journals/cmmm/2015/607407/
+
 [5] http://research.ijcaonline.org/volume55/number4/pxc3882634.pdf
+
 [6] http://article.sapub.org/pdf/10.5923.j.ajis.20120206.01.pdf
+
 [7] https://pdfs.semanticscholar.org/f07f/ec524e5a6dd08163e9f56599ea712cbd0a31.pdf
+
 [8] https://arxiv.org/abs/1505.04597
+
 [9] https://tyvik.ru/posts/pillow-almighty/
+
 [10] https://www.youtube.com/watch?v=jzZ3WVhgi5w
+
 [11] http://lab.alexkuk.ru/ocr/
+
 [12] https://github.com/ulikoehler/OTR
+
 [13] https://github.com/inuyasha2012/answer-sheet-scan
+
 [14] https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition
+
 [15] https://github.com/enigma-ml/textify
+
 [17] https://www.ph4.ru/fonts_fonts.php?fn=all&l=rus&id=2
+
 [18] https://arxiv.org/pdf/1706.07422.pdf
+
 [19] https://github.com/Belval/pdf2image
 
 # Хошимин
@@ -244,20 +262,37 @@ PDFConverter обрабатывает все файлы, который лежа
 
 ## Ссылки
 [1] http://www.machinelearning.ru/wiki/index.php?title=Логистическая_функция
+
 [2] http://www.sibran.ru/upload/iblock/0e1/0e15d76aff003e3879db51f21ae7f694.pdf
+
 [3] https://www.osapublishing.org/DirectPDFAccess/0CF96649-F614-A5CD-5F118AF53F660BAB_383046/copp-2-1-69.pdf?da=1&id=383046&seq=0&mobile=no
+
 [4] https://www.hindawi.com/journals/cmmm/2015/607407/
+
 [5] http://research.ijcaonline.org/volume55/number4/pxc3882634.pdf
+
 [6] http://article.sapub.org/pdf/10.5923.j.ajis.20120206.01.pdf
+
 [7] https://pdfs.semanticscholar.org/f07f/ec524e5a6dd08163e9f56599ea712cbd0a31.pdf
+
 [8] https://arxiv.org/abs/1505.04597
+
 [9] https://tyvik.ru/posts/pillow-almighty/
+
 [10] https://www.youtube.com/watch?v=jzZ3WVhgi5w
+
 [11] http://lab.alexkuk.ru/ocr/
+
 [12] https://github.com/ulikoehler/OTR
+
 [13] https://github.com/inuyasha2012/answer-sheet-scan
+
 [14] https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition
+
 [15] https://github.com/enigma-ml/textify
+
 [17] https://www.ph4.ru/fonts_fonts.php?fn=all&l=rus&id=2
+
 [18] https://arxiv.org/pdf/1706.07422.pdf
+
 [19] https://github.com/Belval/pdf2image
