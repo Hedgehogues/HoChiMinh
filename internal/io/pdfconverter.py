@@ -25,11 +25,11 @@ class PDFConverter:
         resolution: масштаб получаемого изображения (dpi)
     """
     def __init__(self, in_path, out_path=None, resolution=100):
-        self.in_paths = [
+        self.in_paths = sorted([
             in_path + path
             for path in os.listdir(in_path)
             if os.path.splitext(os.path.basename(path))[1] == '.pdf'
-        ]
+        ])
         self.out_path = out_path
         self.resolution = resolution
 

@@ -192,7 +192,11 @@ class HoChiMinh:
         self.__x = sorted(list(set(self.__x)))
         self.__y = sorted(list(set(self.__y)))
 
-        table = self.ocr.recognize_table(self.__image.matrix, self.__create_table())
+        self.ocr = None
+        if self.ocr is not None:
+            table = self.ocr.recognize_table(self.__image.matrix, self.__create_table())
+        else:
+            table = self.__create_table()
 
         return table
 

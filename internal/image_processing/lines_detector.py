@@ -82,17 +82,20 @@ class SobelDirector:
         height: высота изображения, к которой приводится входное изображение. Если height is None, то изменение 
         размера не производится
         confidence_interval: доверительный интервал
+        min_side_intensity: минимальная возможная суммарная интенсивность стороны 
         
         Замечание: если границы окажутся слишком тонкими, то медианный фильтр их не возьмёт
         Замечание: 
     """
 
-    def __init__(self, eps_rad=0.1, kernel_edge=5, strength=20, kernel_filter=5, height=1000, level_confidence=0.95):
+    def __init__(self, eps_rad=0.1, kernel_edge=5, strength=20, kernel_filter=5, height=1000, level_confidence=0.90,
+                 min_side_intensity=50000):
         self.eps_rad = eps_rad
         self.kernel_edge = kernel_edge
         self.kernel_filter = kernel_filter
         self.height = height
         self.level = level_confidence
+        self.min_side_intensity = min_side_intensity
 
         self.input_height = 0
         self.strength = strength
@@ -143,13 +146,11 @@ class SobelDirector:
         horisontal_edge = ndimage.median_filter(horisontal_edge, size=self.kernel_filter)
         vertical_edge = ndimage.median_filter(vertical_edge, size=self.kernel_filter)
 
-        # cv2.imshow('', horisontal_edge)
-        # cv2.waitKey(0)
-        # cv2.imshow('', vertical_edge)
-        # cv2.waitKey(0)
+        h_lines_intensity = np.convolve(np.sum(horisontal_edge, axis=1), [0.75, 1, 0.75])
+        v_lines_intensity = np.convolve(np.sum(vertical_edge, axis=0), [0.75, 1, 0.5])
 
-        h_lines_intensity = np.convolve(np.sum(horisontal_edge, axis=1), [0.5, 1, 0.5])
-        v_lines_intensity = np.convolve(np.sum(vertical_edge, axis=0), [0.5, 1, 0.5])
+        if h_lines_intensity.max() < self.min_side_intensity or v_lines_intensity.max() < self.min_side_intensity:
+            return [], []
 
         h_threshold = st.t.interval(self.level, len(h_lines_intensity) - 1, loc=np.mean(h_lines_intensity),
                                     scale=st.sem(h_lines_intensity))[1]
