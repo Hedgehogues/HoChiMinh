@@ -199,32 +199,3 @@ class HoChiMinh:
             table = self.__create_table()
 
         return table
-
-
-class PDFParser:
-
-    def __init__(self, table_extractor):
-        self.table_extractor = table_extractor
-        self.table = []
-
-    def extract_table(self):
-
-        prev_base_path = ''
-        while True:
-            table_per_page = self.table_extractor.process_image()
-            if table_per_page is None:
-                table = self.table
-                self.table = []
-                break
-
-            path_to_img = self.table_extractor.get_path()
-            base_path = path_to_img[:str.rfind(path_to_img, '/') + 1]
-            if base_path == prev_base_path or prev_base_path == '':
-                prev_base_path = base_path
-                self.table += table_per_page
-            else:
-                table = self.table
-                self.table = table_per_page
-                break
-
-        return table
