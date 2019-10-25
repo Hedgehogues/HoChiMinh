@@ -1,9 +1,0 @@
-opencv-python=3.4.0.12
-scikit-learn=0.19.1
-numpy=1.14.0
-scikit-image=0.13.1
-pytesseract=0.2.0
-scipy=1.0.0
-pdf2image=0.1.8
-pillow=5.0.0
-xlrd=1.1.0

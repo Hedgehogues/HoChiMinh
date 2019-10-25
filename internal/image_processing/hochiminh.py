@@ -1,5 +1,6 @@
 from collections import defaultdict
 from operator import itemgetter
+import cv2
 
 from sklearn.neighbors import KDTree
 
