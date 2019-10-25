@@ -1,13 +1,13 @@
 import unittest
 
-from internal.image_processing.connected_components import ConnectedComponents
-from internal.image_processing.cross_detector import CrossDetector
-from internal.image_processing.hochiminh import HoChiMinh
-from internal.image_processing.lines_detector import SobelDirector
-from internal.image_processing.ocr import TesseractWrapper
-from internal.io.pdfconverter import PDFConverter
-from internal.io.reader import ImagePDFReader
-from internal.pdf_parser import PDFParser
+from hochiminh.image_processing.connected_components import ConnectedComponents
+from hochiminh.image_processing.cross_detector import CrossDetector
+from hochiminh.image_processing.hochiminh import HoChiMinh
+from hochiminh.image_processing.lines_detector import SobelDirector
+from hochiminh.image_processing.ocr import TesseractWrapper
+from hochiminh.io.pdfconverter import PDFConverter
+from hochiminh.io.reader import ImagePDFReader
+from hochiminh.pdf_parser import PDFParser
 
 
 class TestPDFConverter(unittest.TestCase):

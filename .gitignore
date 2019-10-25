@@ -6,3 +6,6 @@ data/dev/fonts_dataset/
 */__pycache__/
 *.pyc
 *~*
+build/
+*.egg-info/
+dist/
