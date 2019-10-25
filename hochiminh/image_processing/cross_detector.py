@@ -1,5 +1,6 @@
-from internal.image_processing.geometry import Point
 import numpy as np
+
+from hochiminh.image_processing.geometry import Point
 
 
 class CrossDetector:

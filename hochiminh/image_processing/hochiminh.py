@@ -1,10 +1,9 @@
 from collections import defaultdict
 from operator import itemgetter
-import cv2
 
 from sklearn.neighbors import KDTree
 
-from internal.image_processing.geometry import Image, Point, Cell
+from hochiminh.image_processing.geometry import Image, Point, Cell
 
 
 class HoChiMinh:

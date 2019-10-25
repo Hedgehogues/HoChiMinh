@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import scipy.stats as st
 
-from internal.image_processing.geometry import Point
+from hochiminh.image_processing.geometry import Point
 
 
 class HoughTransformerCanny:

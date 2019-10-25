@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-from internal.extractor.image_processing.connected_components import ConnectedComponents
-from internal.extractor.image_processing.geometry import Image
-from internal.io.reader import ImageReader
+from hochiminh.image_processing.connected_components import ConnectedComponents
+from hochiminh.image_processing.geometry import Image
+from hochiminh.io.reader import ImageReader
 
 path = 'data/test/ho_chi_minh/pdf/images/6.pdf/page-vertical.png'
 image = Image(image_reader=ImageReader(path), image_writer=None, binarization=210)

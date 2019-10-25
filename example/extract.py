@@ -1,11 +1,10 @@
-from internal import pdf_parser
-from internal.image_processing import hochiminh
-from internal.image_processing.connected_components import ConnectedComponents
-from internal.image_processing.cross_detector import CrossDetector
-from internal.image_processing.lines_detector import SobelDirector
-from internal.image_processing.ocr import TesseractWrapper
-from internal.io import reader
-from internal.io import pdfconverter
+from hochiminh import pdf_parser
+from hochiminh.image_processing import hochiminh
+from hochiminh.image_processing.connected_components import ConnectedComponents
+from hochiminh.image_processing.cross_detector import CrossDetector
+from hochiminh.image_processing.lines_detector import SobelDirector
+from hochiminh.image_processing.ocr import TesseractWrapper
+from hochiminh.io import pdfconverter, reader
 
 path = "../data/test/ho_chi_minh/"
 parser = pdf_parser.PDFParser(
