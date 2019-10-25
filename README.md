@@ -54,13 +54,20 @@ To extract the text, you can use the following code:
         for i in range(4):
             table.append(templator.next_points())
 
-# How to install
+# How to install without pip
 
-    pip install opencv-python=3.4.0.12 scikit-learn=0.19.1 numpy=1.14.0 scikit-image=0.13.1 pytesseract=0.2.0 scipy=1.0.0
-    pip install pdf2image=0.1.8 pillow=5.0.0 xlrd=1.1.0
     apt-get install tesseract-ocr
     apt-get install tesseract-ocr-rus
     apt-get install poppler-utils
+    pip install opencv-python=3.4.0.12 scikit-learn=0.19.1 numpy=1.14.0 scikit-image=0.13.1 pytesseract=0.2.0 scipy=1.0.0
+    pip install pdf2image=0.1.8 pillow=5.0.0 xlrd=1.1.0
+
+# How to install WITH pip
+
+    apt-get install tesseract-ocr
+    apt-get install tesseract-ocr-rus
+    apt-get install poppler-utils
+    pip install hochiminh
     
 # NOTICE
 
