@@ -59,15 +59,92 @@ To extract the text, you can use the following code:
     apt-get install tesseract-ocr
     apt-get install tesseract-ocr-rus
     apt-get install poppler-utils
-    pip install opencv-python=3.4.0.12 scikit-learn=0.19.1 numpy=1.14.0 scikit-image=0.13.1 pytesseract=0.2.0 scipy=1.0.0
-    pip install pdf2image=0.1.8 pillow=5.0.0 xlrd=1.1.0
+    apt-get install make
+    make deps
 
 # How to install WITH pip
 
     apt-get install tesseract-ocr
     apt-get install tesseract-ocr-rus
     apt-get install poppler-utils
+    apt-get install make
     pip install hochiminh
+    
+# Build from source
+
+    apt-get install tesseract-ocr
+    apt-get install tesseract-ocr-rus
+    apt-get install poppler-utils
+    apt-get install make
+    git clone https://github.com/Hedgehogues/HoChiMinh
+    make deps
+    
+# Service
+
+If you want to use our application as service, you can use demonstration application. Starting:
+
+    make run
+    
+We use [fastAPI](https://github.com/tiangolo/fastapi). After that you can go to `http://0.0.0.0:8000/docs` and you can use 
+swagger for send requests. 
+
+![Flowchart](data/README/swagger.png)
+
+We have two endpoints: 
+
+* GET status
+* POST pdf for parsing
+
+POST request is a very long request. Therefore we set status to local storage and lock another requests. You can do the 
+only request. After that you can waiting will finished request and retry another request. You can check request into GET
+status request.
+
+Example of response (list of cells of pages):
+
+    {
+      "cells": [
+        [
+          {
+            "x_min": 92,
+            "x_max": 164,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          {
+            "x_min": 164,
+            "x_max": 504,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          {
+            "x_min": 504,
+            "x_max": 639,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          ...
+        ]  
+      ]    
+    } 
+    
+# Docker
+
+You can use our dockerfile. We recommend to use [docker compose](https://docs.docker.com/compose/):
+
+    docker-compose up
+    
+Before this, please, installing:
+ 
+    apt-get install docker.io docker-compose
+    
+After that, you can run docker or docker-compose. You can get service at `http://0.0.0.0:8000/docs`. Notice: building 
+docker image is built a so long time. Therefore we prepare docker-image for you.  
     
 # NOTICE
 
@@ -250,15 +327,79 @@ tables were unified, then there is an erroneous recognition.
     apt-get install tesseract-ocr
     apt-get install tesseract-ocr-rus
     apt-get install poppler-utils
-    pip install opencv-python=3.4.0.12 scikit-learn=0.19.1 numpy=1.14.0 scikit-image=0.13.1 pytesseract=0.2.0 scipy=1.0.0
-    pip install pdf2image=0.1.8 pillow=5.0.0 xlrd=1.1.0
+    apt-get install make
+    make deps
 
 # How to install WITH pip
 
     apt-get install tesseract-ocr
     apt-get install tesseract-ocr-rus
     apt-get install poppler-utils
+    apt-get install make
     pip install hochiminh
+    
+# Build from source
+
+    apt-get install tesseract-ocr
+    apt-get install tesseract-ocr-rus
+    apt-get install poppler-utils
+    apt-get install make
+    git clone https://github.com/Hedgehogues/HoChiMinh
+    make deps
+    
+# Сервис
+
+Если вы хотите использовать наше приложение как сервис, вы можете использовать демонстрационное приложение. Начало:
+
+    make run
+    
+Мы используем [fastAPI](https://github.com/tiangolo/fastapi). После этого вы можете перейти к `http://0.0.0.0:8000/docs`
+и вы можете использовать swagger для отправки запросов.
+
+![Flowchart](data/README/swagger.png)
+
+У нас есть две конечные точки:
+
+* GET /status
+* POST /parse/pdf
+
+POST-запрос - это очень длинный запрос. Поэтому мы устанавливаем статус в локальное хранилище и блокируем другие 
+запросы. Вы можете выполнить единственный запрос. После этого Вы можете дождаться завершения запроса и повторить другой 
+запрос. Вы можете проверить запрос в GET /status.
+
+Пример ответа (список ячеек со всех страниц):
+
+    {
+      "cells": [
+        [
+          {
+            "x_min": 92,
+            "x_max": 164,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          {
+            "x_min": 164,
+            "x_max": 504,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          {
+            "x_min": 504,
+            "x_max": 639,
+            "y_min": 661,
+            "y_max": 686,
+            "prob": 1,
+            "text": ""
+          },
+          ...
+        ]  
+      ]    
+    }
     
 ## Замечение
 

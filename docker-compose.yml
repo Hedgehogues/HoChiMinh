@@ -1,0 +1,8 @@
+version: '2'
+services:
+    service:
+        restart: always
+        network_mode: host
+        build:
+            context: .
+            dockerfile: Dockerfile
