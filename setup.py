@@ -24,7 +24,7 @@ print(f'public requirements: {install_reqs}')
 
 kwargs = {
     'name': "HoChiMinh",
-    'version': "1.0.0",
+    'version': "1.0.1",
     'author': 'Egor Urvanov',
     'author_email': 'hedgehogues@bk.ru',
     'description': 'Ho Chi Minh is designed to extract textual information from tables presented in PDF, pictures or other format. Хошимин предназначен для извлечения текстовой информации из таблиц, представленных в PDF, картинках или ином формате.',
